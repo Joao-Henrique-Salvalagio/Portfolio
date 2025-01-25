@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #0056b3;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projetos-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.projeto {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 20px);
+  text-align: center;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.projeto a {
+  color: inherit;
+  text-decoration: none;
+  display: block; 
+  height: 100%; 
+  width: 100%;
+}
+
+.projeto img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.projeto h3 {
+  font-size: 1.7rem;
+  margin-top: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+.projeto p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.projeto:hover::after {
+  content: "Clique para ver mais";
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 12px 25px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.projeto::after {
+  content: "";
+  opacity: 0;
+}
+
+.projeto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.projeto:hover::after {
+  content: "Clique para ver mais"; 
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 1); 
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1; 
+}
+
+.projeto::after {
+  content: "";
+  opacity: 0;
+}
+
+.projeto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+ul li {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+.social-media li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.social-media a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.social-media a:hover {
+  color: #0056b3;
+}
+
+.habilidades-categorias {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px; 
+  margin-top: 40px;
+  padding-bottom: 30px;
+}
+
+.categoria {
+  text-align: center;
+  width: 30%; 
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categoria h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.categoria ul {
+  list-style-type: none;
+}
+
+.categoria ul li {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.categoria ul li:hover {
+  background-color: #0056b3;
+}
+
+
+.categoria.front-end {
+  border: 3px solid #007bff;
+}
+
+.categoria.back-end {
+  border: 3px solid #28a745; 
+}
+
+.categoria.banco-dados {
+  border: 3px solid #ffc107; 
+}
+
+@media (max-width: 768px) {
+  .projetos-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .projeto {
+    width: 90%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .habilidades-categorias {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .categoria {
+    width: 80%;
+  }
+}
+
+#contato .container {
+  text-align: center;
+}
+
+#contato h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#contato p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.social-media {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-media li {
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-media li a {
+  color: white;
+  text-decoration: none;  
+}
+
+.social-media li:nth-child(1) {
+  background-color: #007bff;  
+}
+
+.social-media li:nth-child(1):hover {
+  background-color: #0056b3; 
+}
+
+.social-media li:nth-child(4) {
+  background-color: #25d366;  
+}
+
+.social-media li:nth-child(4):hover {
+  background-color: #128c7e;
+}
+
+.social-media li:nth-child(3) {
+  background-color: #dc3545;  
+}
+
+.social-media li:nth-child(3):hover {
+  background-color: #c82333; 
+}
+
+.social-media li:nth-child(2) {
+  background-color: #000;  
+}
+
+.social-media li:nth-child(2):hover {
+  background-color: #333; 
+}
+
+.social-media li a:hover {
+  color: white;  
+  text-decoration: none;  
+}
+
+.social-media li:hover {
+  transform: translateY(-5px);  
+}
