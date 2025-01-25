@@ -199,9 +199,7 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  width: 100%; 
-  position: relative; 
-  bottom: 0;
+  margin-top: auto; 
 }
 
 footer p {
