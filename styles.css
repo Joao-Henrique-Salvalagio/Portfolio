@@ -10,6 +10,7 @@ body {
   background-color: #f4f4f9;
   color: #333;
   width: 100%;
+  overflow-x: hidden;
 }
 
 /* Estilo do header */
@@ -79,7 +80,18 @@ nav ul li a:hover {
     font-size: 1.3rem; /* Aumenta o tamanho da fonte dos links */
     padding: 12px 0; /* Ajusta o padding para melhor visualização */
   }
+
+  /* Adicionando min-width para garantir largura mínima */
+  body {
+    min-width: 320px; /* Defina o valor mínimo de largura */
+  }
+
+  /* Se necessário, adicione o min-width no container para evitar colapsos */
+  .container {
+    min-width: 320px;
+  }
 }
+
 
 
 section {
