@@ -4,12 +4,16 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f9;
   color: #333;
+  width: 100%;
 }
 
+/* Estilo do header */
+/* Estilo do header */
 header {
   background-color: #007bff;
   color: white;
@@ -25,11 +29,13 @@ header .logo h1 {
   letter-spacing: 2px;
 }
 
+/* Estilo do menu de navegação */
 nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
   gap: 20px;
+  padding: 0;
 }
 
 nav ul li {
@@ -49,6 +55,32 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #0056b3;
 }
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  /* Ajuste para o título */
+  header .logo h1 {
+    font-size: 2rem; /* Ajuste o tamanho do logo para telas menores */
+  }
+
+  /* Ajuste do menu de navegação para telas pequenas */
+  nav ul {
+    flex-direction: column; /* Coloca o menu de navegação em coluna */
+    align-items: center; /* Centraliza os itens */
+    gap: 15px; /* Reduz o espaço entre os itens */
+  }
+
+  nav ul li {
+    width: 100%; /* Faz cada item ocupar toda a largura */
+    text-align: center; /* Centraliza o texto dentro de cada item */
+  }
+
+  nav ul li a {
+    font-size: 1.3rem; /* Aumenta o tamanho da fonte dos links */
+    padding: 12px 0; /* Ajusta o padding para melhor visualização */
+  }
+}
+
 
 section {
   padding: 60px 20px;
