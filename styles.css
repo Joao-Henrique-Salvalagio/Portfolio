@@ -4,16 +4,23 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%; /* Garantir que o HTML e o body tenham 100% da largura */
+  min-width: 100%; /* Garantir que a largura mínima seja 100% */
+  overflow-x: hidden; /* Impede a rolagem horizontal */
+}
 
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f9;
   color: #333;
   width: 100%;
-  overflow-x: hidden;
+  min-width: 320px; /* Garantir que a largura mínima seja mantida */
+  display: flex; /* Usando flexbox para facilitar o layout */
+  flex-direction: column; /* Para garantir que o conteúdo flua de cima para baixo */
+  overflow-x: hidden; /* Impede a rolagem horizontal */
 }
 
-/* Estilo do header */
 /* Estilo do header */
 header {
   background-color: #007bff;
@@ -91,8 +98,6 @@ nav ul li a:hover {
     min-width: 320px;
   }
 }
-
-
 
 section {
   padding: 60px 20px;
@@ -252,7 +257,6 @@ footer p {
   letter-spacing: 0.5px; 
 }
 
-
 .social-media li {
   display: inline;
   margin-right: 20px;
@@ -310,7 +314,6 @@ footer p {
 .categoria ul li:hover {
   background-color: #0056b3;
 }
-
 
 .categoria.front-end {
   border: 3px solid #007bff;
